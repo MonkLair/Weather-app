@@ -7,32 +7,29 @@ import type { DataRequest } from '../models/IDataModels'
 
 interface SearchInputProps {
     setIsActive: (state: boolean) => void,
-    setIsCorrect: (state: boolean) => void,
+    setCityValue: (state: string) => void,
     setData: (state: DataRequest | false) => void
 }
 
-export default function SearchInput({ setIsActive, setIsCorrect, setData }: SearchInputProps) {
+export default function SearchInput({ setIsActive, setCityValue, setData }: SearchInputProps) {
     const [searchRequest, setSearchRequest] = useState<string>('')
 
 
     async function handleClick(e: React.MouseEvent | React.KeyboardEvent) {
+
         if ('button' in e || e.code == 'Enter') {
-            const currData = await requestAPI(searchRequest)
+            setCityValue(searchRequest)
+            const currData = await requestAPI(searchRequest.trim())
             console.log(currData)
             if (currData !== false) {
                 setData(currData)
-                if ('message' in currData) {
-                    setIsCorrect(false)
-                } else {
-                    setIsCorrect(true)
-                }
             }
             setIsActive(true)
         }
     }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-        const curr = e.target.value.trim()
+        const curr = e.target.value
         if (curr !== searchRequest)
             setSearchRequest(curr)
     }

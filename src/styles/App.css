@@ -95,7 +95,9 @@ body {
     opacity: 0;
 }
 
-.weather-data.active, .temperature.active, .not-found-text.active {
+.weather-data.active,
+.temperature.active,
+.not-found-text.active {
     animation: 1s dataFadeIn forwards;
     animation-delay: 0.3s;
 }
@@ -110,7 +112,7 @@ body {
     animation-delay: 0.3s;
 }
 
-@keyframes notFoundFadeIn{
+@keyframes notFoundFadeIn {
     to {
         scale: 1;
         opacity: 1;
@@ -118,14 +120,14 @@ body {
     }
 }
 
-@keyframes dataFadeIn{
+@keyframes dataFadeIn {
     to {
         scale: 1;
         opacity: 1;
     }
 }
 
-@keyframes blockFadeIn{
+@keyframes blockFadeIn {
     to {
         scale: 1;
         opacity: 1;
@@ -171,7 +173,8 @@ body {
     text-align: center;
 }
 
-.feels > h2, h3 {
+.feels>h2,
+h3 {
     font-weight: 300;
     margin: 0;
 }
@@ -192,7 +195,11 @@ body {
     width: 100%;
 }
 
-.snow, .clouds, .rain, .clear, .thunder {
+.snow,
+.clouds,
+.rain,
+.clear,
+.thunder {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -236,7 +243,9 @@ body {
     justify-content: space-around;
 }
 
-.humidity-icon, .wind-icon, .pressure-icon {
+.humidity-icon,
+.wind-icon,
+.pressure-icon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -247,9 +256,11 @@ body {
 .humidity-icon {
     background-image: url('../images/humidity.png');
 }
+
 .wind-icon {
     background-image: url('../images/wind.png');
 }
+
 .pressure-icon {
     background-image: url('../images/pressure.png');
 }
@@ -268,4 +279,47 @@ body {
     align-items: start;
     height: 50%;
     margin-left: 10px;
+}
+
+
+@media (max-width: 450px) {
+    .search-box {
+        width: 60%;
+    }
+
+    .search-button {
+        width: 20%;
+    }
+
+    .weather-block {
+        width: 60%;
+    }
+
+    .temperature {
+        font-size: 48px;
+        width: 55%;
+    }
+
+    .snow,
+    .clouds,
+    .rain,
+    .clear,
+    .thunder {
+        width: 80px;
+        height: 80px;
+    }
+
+    .humidity-icon,
+    .wind-icon,
+    .pressure-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .condition-block {
+        flex-direction: column;
+    }
+    .condition-block-wrap {
+        display: flex;
+        align-items: center;
+    }
 }

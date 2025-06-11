@@ -3,9 +3,10 @@ import ConditionItem from "./ConditionItem";
 
 interface WeatherBlockCorrectProps {
     data: DataSucess,
+    cityValue: string
 }
 
-export default function WeatherBlockCorrect({ data }: WeatherBlockCorrectProps) {
+export default function WeatherBlockCorrect({ data, cityValue }: WeatherBlockCorrectProps) {
     let weatherType: string;
 
     switch (data.weather[0].main) {
@@ -29,7 +30,7 @@ export default function WeatherBlockCorrect({ data }: WeatherBlockCorrectProps) 
     return (
         <div className="weather-block active">
             <div className="weather-data active place">
-                <p className="place-text">{data.name.split(' ')[0].toUpperCase()}</p>
+                <p className="place-text">{cityValue.toUpperCase()}</p>
             </div>
             <div className="weather-data active temp">
                 <div className="cont">

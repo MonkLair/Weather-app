@@ -8,7 +8,7 @@ import type { DataRequest } from "./models/IDataModels"
 
 function App() {
     const [isActive, setIsActive] = useState<boolean>(false)
-    const [isCorrect, setIsCorrect] = useState<boolean>(false)
+    const [cityValue, setCityValue] = useState<string>('')
     const [data, setData] = useState<DataRequest | false>(false)
 
     return (
@@ -16,11 +16,11 @@ function App() {
             <SearchInput
                 setData={setData}
                 setIsActive={setIsActive}
-                setIsCorrect={setIsCorrect}
+                setCityValue={setCityValue}
             />
             {isActive
-                ? isCorrect && data !== false && 'main' in data
-                    ? <WeatherBlockCorrect data={data} />
+                ? data !== false && 'main' in data
+                    ? <WeatherBlockCorrect cityValue={cityValue} data={data} />
                     : <WeatherBlockUncorrect />
                 : <div style={{ height: '60px' }}></div>
 
