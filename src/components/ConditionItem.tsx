@@ -1,20 +1,22 @@
+import type { DataForm } from "../models/IDataModels";
 
 interface ConditionItemProps {
     conditionType: 'wind' | 'pressure' | 'humidity',
+    form: DataForm,
     value: number
 }
 
-export default function ConditionItem({ conditionType, value }: ConditionItemProps) {
+export default function ConditionItem({ conditionType, form, value }: ConditionItemProps) {
     let units: string;
     switch(conditionType){
         case 'wind':
-            units = 'km/h'
+            units = ' ' + form.windSpeed
             break
         case 'humidity':
             units = '%'
             break
         case 'pressure':
-            units = ''
+            units = ' ' + form.pressure
             break
     }
 

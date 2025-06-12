@@ -42,3 +42,9 @@ export interface DataFail {
     cod: '400',
     message: string
 }
+
+export interface DataForm {
+    temperature: '℃' | '°F',
+    windSpeed: 'km/h' | 'm/s' | 'ml/h',
+    pressure: 'mmHg.' | 'gPa'
+}
