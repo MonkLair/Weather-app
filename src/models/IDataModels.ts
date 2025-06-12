@@ -46,5 +46,5 @@ export interface DataFail {
 export interface DataForm {
     temperature: '℃' | '°F',
     windSpeed: 'km/h' | 'm/s' | 'ml/h',
-    pressure: 'mmHg.' | 'gPa'
+    pressure: 'mm' | 'gPa'
 }

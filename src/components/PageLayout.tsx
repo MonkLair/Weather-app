@@ -5,7 +5,7 @@ import type { DataForm } from "../models/IDataModels"
 
 export default function PageLayout() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
-    const [form, setForm] = useState<DataForm>({ temperature: '℃', windSpeed: 'km/h', pressure: 'mmHg.' })
+    const [form, setForm] = useState<DataForm>({ temperature: '℃', windSpeed: 'km/h', pressure: 'mm' })
 
     return (
         <div className="root" onClick={() => setIsOpen(false)}>

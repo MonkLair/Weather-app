@@ -42,9 +42,9 @@ export default function SettingsModal({ setForm, form }: SettingsModalProps) {
                         <div className="pressure-icon modal-icon"></div>
                         <span className="modal-condition">Давление</span>
                     </div>
-                    <select value={pressure} onChange={(e) => setForm({ ...form, pressure: e.target.value as 'mmHg.' | 'gPa'})} className="modal-select">
+                    <select value={pressure} onChange={(e) => setForm({ ...form, pressure: e.target.value as 'mm' | 'gPa'})} className="modal-select">
                         <option >{pressure}</option>
-                        <option>{pressure === 'mmHg.' ? 'gPa' : 'mmHg.'}</option>
+                        <option>{pressure === 'mm' ? 'gPa' : 'mm'}</option>
                     </select>
                 </div>
             </div>

@@ -449,6 +449,8 @@ h3 {
 
     .condition-block {
         flex-direction: column;
+        width: 33%;
+        align-items: center;
     }
 
     .condition-block-wrap {
@@ -469,5 +471,9 @@ h3 {
 
     .settings-modal {
         right: 10px;
+    }
+
+    .condition-block-wrap {
+        margin: 0;
     }
 }

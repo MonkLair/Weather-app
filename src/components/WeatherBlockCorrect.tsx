@@ -75,7 +75,7 @@ export default function WeatherBlockCorrect({ data, cityValue, dataForm }: Weath
                 />
                 <ConditionItem
                     value=
-                    {dataForm.pressure === 'mmHg.'
+                    {dataForm.pressure === 'mm'
                         ? data.main.pressure
                         : Math.round((data.main.pressure * 133.32)/1000)
                     }
