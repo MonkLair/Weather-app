@@ -1,5 +1,5 @@
 import { NewsAPI } from "../consts/RequestAPI";
-import type { INewsRequest } from "../models/INewsModels";
+import type { INewsRequest } from "../../../models/INewsModels";
 
 
 export async function requestNews(): Promise<INewsRequest> {

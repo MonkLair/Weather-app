@@ -1,10 +1,10 @@
-import type { INews } from '../models/INewsModels'
+import type { INews } from "../../../models/INewsModels"
 
-interface NewsProps {
+interface NewsItemProps {
     newsInfo: INews
 }
 
-export default function News({ newsInfo }: NewsProps) {
+export default function NewsItem({ newsInfo }: NewsItemProps) {
     const imgUrl = newsInfo.media[0]["media-metadata"][1].url
 
     return (

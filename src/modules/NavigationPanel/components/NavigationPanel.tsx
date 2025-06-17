@@ -1,8 +1,9 @@
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router";
-import SettingsModal from "./SettingsModal";
-import type { DataForm } from "../models/IDataModels";
+import type { DataForm } from "../../../models/IDataModels";
+import SettingsModal from "../../../common/modals/SettingsModal";
+
 
 interface NavigationPanelProps {
     setIsOpen: (arg: boolean) => void,
@@ -11,7 +12,7 @@ interface NavigationPanelProps {
     form: DataForm
 }
 
-export default function NavigationPanel({setIsOpen, isOpen, setForm, form}: NavigationPanelProps) {
+export function NavigationPanel({setIsOpen, isOpen, setForm, form}: NavigationPanelProps) {
 
 
     return (

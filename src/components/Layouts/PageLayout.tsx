@@ -1,7 +1,7 @@
 import { useState } from "react"
-import NavigationPanel from "./NavigationPanel"
 import { Outlet } from "react-router"
-import type { DataForm } from "../models/IDataModels"
+import type { DataForm } from "../../models/IDataModels"
+import { NavigationPanel } from "../../modules/NavigationPanel"
 
 export default function PageLayout() {
     const [isOpen, setIsOpen] = useState<boolean>(false)

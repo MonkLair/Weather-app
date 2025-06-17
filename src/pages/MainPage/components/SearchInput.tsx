@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '../styles/App.css'
+import '../../../styles/App.css'
 import { faLocationDot, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import type { DataRequest } from '../../../models/IDataModels'
 import { requestAPI } from '../api/WeatherRequest'
-import type { DataRequest } from '../models/IDataModels'
+
 
 interface SearchInputProps {
     setIsActive: (state: boolean) => void,

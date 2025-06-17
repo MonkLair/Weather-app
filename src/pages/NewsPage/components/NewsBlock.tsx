@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { requestNews } from "../api/NewsRequest"
-import type { INewsRequest } from "../models/INewsModels";
-import News from "./News";
+import type { INewsRequest } from "../../../models/INewsModels";
+import News from "./NewsItem";
 
-export default function NewsPage() {
+export default function NewsBlock() {
     const [data, setData] = useState<INewsRequest>()
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
@@ -17,7 +17,7 @@ export default function NewsPage() {
 
     return (
         <>
-            <div style={isLoading ? {justifyContent: 'center'} : {}} className="news-block">
+            <div style={isLoading ? { justifyContent: 'center' } : {}} className="news-block">
                 {isLoading
                     ? <div className="loading"></div>
                     : data?.results.map((newsInfo) => {

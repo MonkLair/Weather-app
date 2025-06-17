@@ -1,4 +1,4 @@
-import type { DataForm, DataSucess } from "../models/IDataModels";
+import type { DataSucess, DataForm } from "../../../models/IDataModels";
 import ConditionItem from "./ConditionItem";
 
 interface WeatherBlockCorrectProps {

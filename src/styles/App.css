@@ -198,7 +198,7 @@ h3 {
 }
 
 .not-found {
-    background-image: url('../images/404NotFound.png');
+    background-image: url('../assets/images//404NotFound.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -226,23 +226,23 @@ h3 {
 }
 
 .snow {
-    background-image: url('../images/snow.png');
+    background-image: url('../assets/images//snow.png');
 }
 
 .clouds {
-    background-image: url('../images/clouds.png');
+    background-image: url('../assets/images//clouds.png');
 }
 
 .clear {
-    background-image: url('../images/clear.png');
+    background-image: url('../assets/images//clear.png');
 }
 
 .rain {
-    background-image: url('../images/rain.png');
+    background-image: url('../assets/images//rain.png');
 }
 
 .thunder {
-    background-image: url('../images/thunder.png');
+    background-image: url('../assets/images//thunder.png');
 }
 
 .weather-text {
@@ -272,15 +272,15 @@ h3 {
 }
 
 .humidity-icon {
-    background-image: url('../images/humidity.png');
+    background-image: url('../assets/images/humidity.png');
 }
 
 .wind-icon {
-    background-image: url('../images/wind.png');
+    background-image: url('../assets/images//wind.png');
 }
 
 .pressure-icon {
-    background-image: url('../images/pressure.png');
+    background-image: url('../assets/images//pressure.png');
 }
 
 .condition-block {
@@ -548,6 +548,11 @@ h3 {
         right: 10px;
         top: 75px;
         width: 85%;
+    }
+
+    .modal-icon {
+        width: 19px;
+        height: 20px;
     }
 
     .condition-block-wrap {

@@ -1,5 +1,6 @@
+import type { DataRequest } from "../../../models/IDataModels"
 import { API } from "../consts/WeatherAPI"
-import type { DataRequest } from "../models/IDataModels"
+
 
 function cachedRequestAPI(func: (city: string) => Promise<DataRequest>): (city: string) =>  Promise<DataRequest | false> {
     let previousCity = ''

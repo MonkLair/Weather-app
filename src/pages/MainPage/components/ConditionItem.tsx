@@ -1,4 +1,4 @@
-import type { DataForm } from "../models/IDataModels";
+import type { DataForm } from "../../../models/IDataModels";
 
 interface ConditionItemProps {
     conditionType: 'wind' | 'pressure' | 'humidity',
