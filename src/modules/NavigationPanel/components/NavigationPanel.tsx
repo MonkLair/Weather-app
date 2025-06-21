@@ -28,9 +28,6 @@ export function NavigationPanel({setIsOpen, isOpen, setForm, form}: NavigationPa
                     <span>
                         <Link to='/news' className='navbar-link' >News</Link>
                     </span>
-                    <span>
-                        <Link to='/maps' className='navbar-link' >Maps</Link>
-                    </span>
                 </div>
                 <div className="navbar-item">
                     <div onClick={(e) => {

@@ -321,7 +321,7 @@ h3 {
 
 .navbar-item:first-child {
     justify-content: space-between;
-    padding: 0 200px 0 300px;
+    padding: 0 500px 0 300px;
 
 }
 
@@ -533,7 +533,7 @@ h3 {
     }
 
     .navbar-item:first-child {
-        padding: 5px 0 0 15px;
+        padding: 5px 45px 0 15px;
     }
 
     .navbar-item:last-child {
