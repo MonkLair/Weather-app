@@ -1,6 +1,6 @@
 import { faTemperatureThreeQuarters, faWind } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { DataForm } from "../models/IDataModels";
+import type { DataForm } from "../../models/IDataModels";
 
 interface SettingsModalProps {
     setForm: (arg: DataForm) => void,
