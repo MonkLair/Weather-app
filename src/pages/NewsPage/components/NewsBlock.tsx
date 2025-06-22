@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { requestNews } from "../api/NewsRequest"
 import type { INewsRequest } from "../../../models/INewsModels";
 import News from "./NewsItem";
+import Loader from "../../../common/Loader";
 
 export default function NewsBlock() {
     const [data, setData] = useState<INewsRequest>()
@@ -19,7 +20,7 @@ export default function NewsBlock() {
         <>
             <div style={isLoading ? { justifyContent: 'center' } : {}} className="news-block">
                 {isLoading
-                    ? <div className="loading"></div>
+                    ? <Loader/>
                     : data?.results.map((newsInfo) => {
                         return <News key={newsInfo.id} newsInfo={newsInfo} />
                     })
