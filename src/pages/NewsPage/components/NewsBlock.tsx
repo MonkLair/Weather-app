@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { requestNews } from "../api/NewsRequest"
 import type { INewsRequest } from "../../../models/INewsModels";
-import News from "./NewsItem";
+import NewsItem from "./NewsItem";
 import Loader from "../../../common/Loader";
 
 export default function NewsBlock() {
@@ -22,7 +22,7 @@ export default function NewsBlock() {
                 {isLoading
                     ? <Loader/>
                     : data?.results.map((newsInfo) => {
-                        return <News key={newsInfo.id} newsInfo={newsInfo} />
+                        return <NewsItem key={newsInfo.id} newsInfo={newsInfo} />
                     })
                 }
             </div>

@@ -5,7 +5,7 @@ interface NewsItemProps {
 }
 
 export default function NewsItem({ newsInfo }: NewsItemProps) {
-    const imgUrl = newsInfo.media[0]["media-metadata"][1].url
+    const imgUrl = newsInfo?.media?.[0]?.["media-metadata"]?.[1]?.url
 
     return (
         <>
